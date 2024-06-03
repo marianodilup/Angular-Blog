@@ -3,5 +3,5 @@ export default interface Post {
   title: string;
   text: string;
   author: string;
-  publishDate: Date;
+  publishDate: string;
 }

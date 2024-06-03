@@ -1,0 +1,15 @@
+.header {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20px;
+    .nav-list{
+        display: flex;
+        justify-content: space-around;
+
+        .link{
+            color: black;
+            text-decoration: none;
+        }
+
+    }
+}
