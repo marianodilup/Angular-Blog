@@ -5,6 +5,7 @@ import { PostListComponent } from './components/post-list/post-list.component';
 
 export const routes: Routes = [
   { path: 'createPost', component: CreatePostComponent },
-  { path: 'detailPost', component: DetailPostComponent },
+  /*   { path: 'detailPost', component: DetailPostComponent }, */
   { path: 'postList', component: PostListComponent },
+  { path: 'post:/postName', component: DetailPostComponent },
 ];

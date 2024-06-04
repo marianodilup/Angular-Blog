@@ -2,11 +2,11 @@
     background-color: aquamarine;
     text-align: center;
     padding: 20px;
-    .nav-list{
+    .nav-list {
         display: flex;
         justify-content: space-around;
 
-        .link{
+        .link {
             color: black;
             text-decoration: none;
         }

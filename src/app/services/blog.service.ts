@@ -46,4 +46,10 @@ export class BlogService {
   getAll(title: string): Post | undefined {
     return this.posts.find((post) => post.title === title);
   }
+
+  getById() {}
+
+  create(post: Post): void {
+    this.posts.push(post);
+  }
 }

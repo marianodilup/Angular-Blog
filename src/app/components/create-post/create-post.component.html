@@ -1,1 +1,36 @@
 <app-header></app-header>
+
+<form (submit)="handleSubmit()" [formGroup]="postForm">
+  <h2>Create Post</h2>
+  <fieldset>
+    <label for="title">*Post Title </label>
+    <input type="text" id="title" formControlName="title" />
+    @if(title.invalid && title.touched){
+    <p>Title is required</p>
+    }
+  </fieldset>
+
+  <fieldset>
+    <label for="text">*Text </label>
+    <input type="text" id="text" formControlName="text" />
+    @if(text.invalid && text.touched){
+    <p>Text is required</p>
+    }
+  </fieldset>
+
+  <fieldset>
+    <label for="author">*Author </label>
+    <input type="text" id="author" formControlName="author" />
+    @if(author.invalid && author.touched){
+    <p>Author is required</p>
+    }
+  </fieldset>
+
+  <fieldset>
+    <label for="PublishDate">*Publish Date </label>
+    <input type="date" id="PublishDate" formControlName="PublishDate" />
+  </fieldset>
+
+  <br />
+  <button>Publish Post</button>
+</form>
