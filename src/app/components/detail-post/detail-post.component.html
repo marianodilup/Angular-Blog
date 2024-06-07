@@ -1,1 +1,10 @@
 <app-header></app-header>
+
+@if (selectedPost) {
+<h2>{{ selectedPost.title }}</h2>
+<h3>{{ selectedPost.author }}</h3>
+
+}@else {
+<h2>No hay ningún Post con ese ID</h2>
+}
+<button routerLink="/">Volver a la lista</button>

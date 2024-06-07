@@ -21,7 +21,7 @@ export class CreatePostComponent {
   text: FormControl;
   author: FormControl;
   publishDate: FormControl;
-  constructor(public BlogService: BlogService) {
+  constructor(public blogService: BlogService) {
     this.title = new FormControl('', Validators.required);
     this.text = new FormControl('', Validators.required);
     this.author = new FormControl('', Validators.required);
@@ -34,10 +34,15 @@ export class CreatePostComponent {
       publishDate: this.publishDate,
     });
   }
-
-  handleSubmit(): void {
-    console.log('Post Created', this.postForm.value);
-    this.BlogService.create(this.postForm.value);
-    this.postForm.reset();
+  // este metodo se conecta al servicio llama al metodo del servicio y le envia un post
+  handleSubmit() {
+    this.blogService.create(this.postForm.value).subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (e) => {
+        console.log(e);
+      },
+    });
   }
 }

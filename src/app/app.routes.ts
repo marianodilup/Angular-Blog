@@ -1,11 +1,9 @@
 import { Routes } from '@angular/router';
-import { CreatePostComponent } from './components/create-post/create-post.component';
-import { DetailPostComponent } from './components/detail-post/detail-post.component';
 import { PostListComponent } from './components/post-list/post-list.component';
-
+import { DetailPostComponent } from './components/detail-post/detail-post.component';
+import { CreatePostComponent } from './components/create-post/create-post.component';
 export const routes: Routes = [
-  { path: 'createPost', component: CreatePostComponent },
-  /*   { path: 'detailPost', component: DetailPostComponent }, */
-  { path: 'postList', component: PostListComponent },
-  { path: 'post:/postName', component: DetailPostComponent },
+  { path: '', component: PostListComponent }, // esta es la pag principal
+  { path: ':postId', component: DetailPostComponent }, // se pone dos puntos si queremos que vaya directamente. en vez de "movies/:movieName"
+  { path: 'post/create', component: CreatePostComponent },
 ];

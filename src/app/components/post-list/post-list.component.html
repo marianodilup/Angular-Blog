@@ -1,1 +1,17 @@
 <app-header></app-header>
+
+<ul>
+  @for (post of blogService.posts; track post.id) {
+  <li>
+    <a [routerLink]="post.id.toString()">
+      <!-- El routerLink tiene que ser un string, por ello hacemos .toString() -->
+
+      <h2>{{ post.title }}</h2>
+      <h3>{{ post.text }}</h3>
+      <h3>{{ "Author: " + post.author }}</h3>
+      <h3>{{ "Date: " + post.publishDate }}</h3>
+    </a>
+  </li>
+
+  }
+</ul>

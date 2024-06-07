@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import Post from '../../models/models';
@@ -11,11 +11,23 @@ import { BlogService } from '../../services/blog.service';
   templateUrl: './detail-post.component.html',
   styleUrl: './detail-post.component.css',
 })
-export class DetailPostComponent {
-  selectedPost: Post;
+export class DetailPostComponent implements OnInit {
+  selectedPost: any;
+  constructor(private route: ActivatedRoute, public blogService: BlogService) {}
 
-  constructor(private route: ActivatedRoute, public blogService: BlogService) {
-    const postName = route.snapshot.params['postName'];
-    this.selectedPost = blogService.getById(postName);
+  ngOnInit(): void {
+    const id = this.route.snapshot.params['postId'];
+    this.blogService.getById(id); // variable creada anteriormente para obtener el parametro.
+  }
+  getById(id: number) {
+    this.blogService.getById(id).subscribe({
+      next: (data) => {
+        console.log(data);
+        this.selectedPost = data;
+      },
+      error: (e) => {
+        console.log(e);
+      },
+    });
   }
 }
