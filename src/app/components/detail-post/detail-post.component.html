@@ -1,10 +1,15 @@
 <app-header></app-header>
 
 @if (selectedPost) {
-<h2>{{ selectedPost.title }}</h2>
-<h3>{{ selectedPost.author }}</h3>
+
+<div class="post-detail">
+  <h2 class="post-title">{{ selectedPost.title }}</h2>
+  <h3 class="post-text">{{ selectedPost.text }}</h3>
+  <h3 class="post-author">{{ "Author: " + selectedPost.author }}</h3>
+  <h3 class="post-date">{{ "Date: " + selectedPost.publishDate }}</h3>
+</div>
 
 }@else {
-<h2>No hay ningún Post con ese ID</h2>
+<h2 class="no-post">No hay ningún Post con ese ID</h2>
 }
-<button routerLink="/">Volver a la lista</button>
+<button routerLink="/" class="back-button">Volver a la lista</button>

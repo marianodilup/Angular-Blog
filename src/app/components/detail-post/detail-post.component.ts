@@ -17,7 +17,7 @@ export class DetailPostComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['postId'];
-    this.blogService.getById(id); // variable creada anteriormente para obtener el parametro.
+    this.getById(id); // variable creada anteriormente para obtener el parametro.
   }
   getById(id: number) {
     this.blogService.getById(id).subscribe({

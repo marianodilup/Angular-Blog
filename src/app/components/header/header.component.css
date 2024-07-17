@@ -1,4 +1,4 @@
-.header {
+/* .header {
     background-color: aquamarine;
     text-align: center;
     padding: 20px;
@@ -9,7 +9,45 @@
         .link {
             color: black;
             text-decoration: none;
+            
         }
 
     }
 }
+ */
+
+ .header {
+    background-color:black;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: whitesmoke;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-list .link {
+    margin-left: 20px;
+  }
+  
+  .nav-list .link a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .nav-list .link a:hover {
+    text-decoration: underline;
+  }

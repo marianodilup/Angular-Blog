@@ -1,0 +1,51 @@
+.post-detail {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .post-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .post-text {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .post-author, .post-date {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .no-post {
+    text-align: center;
+    color: #d9534f;
+  }
+  
+  .back-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }

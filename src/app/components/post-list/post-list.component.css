@@ -1,0 +1,39 @@
+ul.post-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li.post-item {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  li.post-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  a.post-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h2.post-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  h3.post-text {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  h3.post-author, h3.post-date {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #999;
+  }
